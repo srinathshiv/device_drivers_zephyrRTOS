@@ -1,0 +1,22 @@
+# Kconfig - HCSR04
+menuconfig HCSR04
+	bool "HCSR04 sensor"
+	depends on GPIO
+	default n
+	help
+		Enable driver for HCSR04
+
+config HCSR04_DEV0_NAME
+	string "Driver name1"
+	depends on HCSR04 && PINMUX && BOARD_GALILEO
+	default "HCSR01"
+    help
+		Device name for hcsr1
+
+config HCSR04_DEV1_NAME
+	string "Driver name2"
+	depends on HCSR04 && PINMUX && BOARD_GALILEO
+	default "HCSR02"
+    help
+		Device name for hcsr2
+
